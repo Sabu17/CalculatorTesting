@@ -1,0 +1,19 @@
+name: Java Testing
+
+on:
+  Push:
+    Branches: ["main"]
+  pull_request:
+    Branches: ["main"]
+
+jobs:
+Build:
+  runs-on: ubuntu-latest
+  steps:
+  - name: checkout
+    uses: actions/checkout@v3
+
+  - name: set up jdk 11
+    use: actions/setup-java@v3
+   
+      
